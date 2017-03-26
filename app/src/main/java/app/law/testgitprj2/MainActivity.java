@@ -5,9 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ListViewCompat;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity
         button1 = (Button) findViewById(R.id.button);
         button2 = (Button) findViewById(R.id.button2);
         mainlistview = (ListView) findViewById(R.id.mainlistview);
+        mainlistview.setAdapter(new TLawAdapater());
         initListeners();
 
     }
@@ -52,6 +57,38 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+    private class TLawAdapater extends BaseAdapter
+    {
+
+        @Override
+        public int getCount()
+        {
+            return lawStore.size();
+        }
+
+        @Override
+        public Object getItem(int i)
+        {
+            return lawStore.get(i);
+        }
+
+        @Override
+        public long getItemId(int i)
+        {
+            return i;
+        }
+
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup)
+        {
+           View rootView;
+            rootView = getLayoutInflater().inflate(R.layout.rowlayout, null);
+            return rootView;
+        }
+    }
+
+
+    private ArrayList lawStore = new ArrayList<String>();
     private Button button1, button2;
     private ListView mainlistview;
 }
