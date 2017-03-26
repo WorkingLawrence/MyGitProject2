@@ -9,6 +9,17 @@ public class TUpdatePrice implements Serializable
     private long lastUpdateTime;
     private String transactionNum;
     private String val1;
+    private String val2;
+
+    public String getVal2()
+    {
+        return val2;
+    }
+
+    public void setVal2(String val2)
+    {
+        this.val2 = val2;
+    }
 
     public String getVal1()
     {
