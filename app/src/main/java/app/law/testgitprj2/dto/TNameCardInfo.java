@@ -16,6 +16,7 @@ public class TNameCardInfo implements Serializable
     private String email;
     private String webSite;
     private ArrayList<String> tags;
+    private long lastModifiedDate;
 
     public String getNamecardId()
     {
@@ -126,5 +127,16 @@ public class TNameCardInfo implements Serializable
     {
         this.tags = tags;
     }
+
+    public long getLastModifiedDate()
+    {
+        return lastModifiedDate;
+    }
+
+    public void setLastModifiedDate(long lastModifiedDate)
+    {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
 
 }
