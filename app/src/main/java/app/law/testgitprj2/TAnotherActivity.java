@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 public class TAnotherActivity extends AppCompatActivity
 {
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -48,5 +47,4 @@ public class TAnotherActivity extends AppCompatActivity
 
     private Button button3, button4;
     private ImageView phoneiv;
-
 }
