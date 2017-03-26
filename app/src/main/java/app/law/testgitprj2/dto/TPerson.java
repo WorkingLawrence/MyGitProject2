@@ -9,6 +9,39 @@ public class TPerson implements Serializable
     private String personName;
     private String personAddress;
     private String personPhoneNum;
+    private String nickname;
+    private String parent;
+    private String hello;
+
+    public String getNickname()
+    {
+        return nickname;
+    }
+
+    public void setNickname(String nickname)
+    {
+        this.nickname = nickname;
+    }
+
+    public String getParent()
+    {
+        return parent;
+    }
+
+    public void setParent(String parent)
+    {
+        this.parent = parent;
+    }
+
+    public String getHello()
+    {
+        return hello;
+    }
+
+    public void setHello(String hello)
+    {
+        this.hello = hello;
+    }
 
     public String getPersonName()
     {
