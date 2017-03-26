@@ -1,9 +1,19 @@
 package app.law.testgitprj2.dto;
 
-/**
- * Created by Administrator on 2017/3/27.
- */
 
-public class TPerson
+import java.io.Serializable;
+
+public class TPerson implements Serializable
 {
+    private String personId;
+
+    public String getPersonId()
+    {
+        return personId;
+    }
+
+    public void setPersonId(String personId)
+    {
+        this.personId = personId;
+    }
 }
