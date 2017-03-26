@@ -7,6 +7,17 @@ public class TUpdatePrice implements Serializable
     private String priceId;
     private float priceVal;
     private long lastUpdateTime;
+    private String transactionNum;
+
+    public String getTransactionNum()
+    {
+        return transactionNum;
+    }
+
+    public void setTransactionNum(String transactionNum)
+    {
+        this.transactionNum = transactionNum;
+    }
 
     public String getPriceId()
     {
@@ -37,5 +48,4 @@ public class TUpdatePrice implements Serializable
     {
         this.lastUpdateTime = lastUpdateTime;
     }
-
 }
